@@ -67,8 +67,8 @@ export default function App() {
       </div>
 
       <div className="btn-control">
-        <button onClick={handleStart}>START</button>
-        <button onClick={handlePause}>PAUSE</button>
+        <button onClick={handleStart} disabled={isActive && !isPause}>START</button>
+        <button onClick={handlePause} disabled={!isActive }>{isPause ? "RESUME" : "PAUSE"}</button>
         <button onClick={handleReset}> RESET</button>
       </div>
     </div>
